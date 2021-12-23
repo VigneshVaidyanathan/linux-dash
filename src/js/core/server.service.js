@@ -33,7 +33,7 @@ angular
 
             var response = JSON.parse(event.data);
             var moduleName = response.moduleName;
-            var moduleData = JSON.parse(response.output);
+            var moduleData = response.output;
 
             if (!!websocket.onMessageEventHandlers[moduleName]) {
               websocket.onMessageEventHandlers[moduleName](moduleData);
