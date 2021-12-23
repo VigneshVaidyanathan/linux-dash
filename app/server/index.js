@@ -55,7 +55,7 @@ wsServer.on('request', function(request) {
     var moduleName = wsReq.utf8Data
     var sendDataToClient = function(code, output) {
       if (code === 0) {
-        var wsResponse = '{ "moduleName": "' + moduleName + '", "output": "'+ output.join('') +'" }'
+        var wsResponse = '{ "moduleName": "' + moduleName + '", "output": '+ output.join('') +' }'
         wsClient.sendUTF(wsResponse)
       }
     }
